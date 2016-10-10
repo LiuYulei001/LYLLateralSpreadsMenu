@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LYLMenuView">
+            <rect key="frame" x="0.0" y="0.0" width="290" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rainy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twp-WG-VhT">
+                    <rect key="frame" x="124" y="90" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="QEl-Rm-JEG"/>
+                        <constraint firstAttribute="width" constant="42" id="tWK-w4-rmD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFe-AW-8eV">
+                    <rect key="frame" x="0.0" y="560" width="290" height="40"/>
+                    <color key="backgroundColor" red="0.89503323325846729" green="1" blue="0.82244398520865936" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="1U5-ON-gjf"/>
+                    </constraints>
+                    <state key="normal" title="退出登录">
+                        <color key="titleColor" red="1" green="0.48649455749779236" blue="0.58830057529208224" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="OutLoginAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="NiS-xU-MOw"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CP6-gK-ERD">
+                    <rect key="frame" x="120" y="35" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="O7q-ZH-PfN"/>
+                        <constraint firstAttribute="width" constant="50" id="sZI-8W-9Px"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ot0-rk-w7u">
+                    <rect key="frame" x="0.0" y="121" width="280" height="429"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="N0s-hE-ry9"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="6ev-m5-4pq"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="CP6-gK-ERD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="35" id="1VD-4c-k49"/>
+                <constraint firstItem="IFe-AW-8eV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AgN-TL-fcV"/>
+                <constraint firstItem="twp-WG-VhT" firstAttribute="top" secondItem="CP6-gK-ERD" secondAttribute="bottom" constant="5" id="E6X-Fm-mFr"/>
+                <constraint firstItem="CP6-gK-ERD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="K0B-UT-Y1H"/>
+                <constraint firstItem="ot0-rk-w7u" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Nyy-kh-4pX"/>
+                <constraint firstItem="ot0-rk-w7u" firstAttribute="top" secondItem="twp-WG-VhT" secondAttribute="bottom" constant="10" id="cZN-fB-m0L"/>
+                <constraint firstAttribute="trailing" secondItem="ot0-rk-w7u" secondAttribute="trailing" constant="10" id="eS1-Ff-aDP"/>
+                <constraint firstItem="IFe-AW-8eV" firstAttribute="top" secondItem="ot0-rk-w7u" secondAttribute="bottom" constant="10" id="ooF-bH-8Kx"/>
+                <constraint firstAttribute="trailing" secondItem="IFe-AW-8eV" secondAttribute="trailing" id="rXQ-Zv-xpl"/>
+                <constraint firstAttribute="bottom" secondItem="IFe-AW-8eV" secondAttribute="bottom" id="ut4-k0-mxs"/>
+                <constraint firstItem="twp-WG-VhT" firstAttribute="centerX" secondItem="CP6-gK-ERD" secondAttribute="centerX" id="vwd-2i-tus"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headerImg" destination="CP6-gK-ERD" id="7ff-QM-b9h"/>
+                <outlet property="myTableView" destination="ot0-rk-w7u" id="XNM-CL-N9R"/>
+            </connections>
+            <point key="canvasLocation" x="178" y="421"/>
+        </view>
+    </objects>
+</document>
