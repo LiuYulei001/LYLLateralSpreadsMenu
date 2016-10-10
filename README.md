@@ -1,6 +1,9 @@
 # LYLLateralSpreadsMenu
 封装的比较简单的类似抽屉的左侧菜单栏！
 
+ ![image](https://github.com/LiuYulei001/LYLLateralSpreadsMenu/BasicFramework/one.png)
+ ![image](https://github.com/LiuYulei001/LYLLateralSpreadsMenu/BasicFramework/two.png)
+
 菜单栏列表的点击回调：
     
     LYLMenuView *menu = [LYLMenuView menuView];
